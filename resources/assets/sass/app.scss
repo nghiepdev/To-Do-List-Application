@@ -1,0 +1,97 @@
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "node_modules/keen-ui/dist/keen-ui";
+body {
+    background: #F5F5F5;
+    font-family: 'Lato';
+}
+ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+main.main {
+    width: 550px;
+    margin: 0px auto;
+
+
+    &>h1 {
+        font-size: 100px;
+        font-weight: 100;
+        text-align: center;
+        color: rgba(175, 47, 47, 0.15);
+    }
+}
+.todos {
+    background: #fff;
+    margin: 20px 0 40px 0;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+
+    .ui-textbox-input {
+        padding: 10px;
+        height: 50px;
+        &::placeholder {
+          font-style: italic;
+          font-weight: 100;
+        }
+    }
+    li {
+        position: relative;
+        padding: 20px 50px;
+        border-bottom: 1px solid #ddd;
+        &>div {
+            position: absolute;
+            top: 0px;
+        }
+        .switch {
+            left: 5px;
+            top: 10px;
+        }
+        .control {
+            right: 5px;
+            opacity: 0;
+            transition: 0.1s all;
+            color: #cc9a9a;
+            &>i{
+                cursor: pointer;
+                transition: color 0.2s ease-out;
+                margin-top: 15px;
+                &:hover {
+                    color: #af5b5e;
+                }
+            }
+        }
+
+        &:hover .control {
+            opacity: 1;
+        }
+    }
+}
+
+.todos-footer {
+    padding: 10px;
+
+    .todos-filter {
+        span {
+            cursor: pointer;
+            border-radius: 3px;
+            border: 1px solid transparent;
+            margin-right: 10px;
+            padding: 5px 10px;
+            display: inline-block;
+
+            &.actived {
+                border-color: rgba(175, 47, 47, 0.2);
+            }
+            &:hover {
+                border-color: rgba(175, 47, 47, 0.1);
+            }
+        }
+    }
+
+    .count-active {
+        span {
+            margin-top: 5px;
+            display: block;
+        }
+    }
+}
